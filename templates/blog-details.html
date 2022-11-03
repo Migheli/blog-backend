@@ -1,13 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block title %}
-{{ post.title }} - Blog Details
+  {{ post.title }} - Blog Details
 {% endblock %}
 
 {% block content %}
-
   <!--================Header Menu Area =================-->
   <header class="header_area">
     <div class="main_menu">
@@ -66,13 +64,11 @@
       <div class="row">
         <div class="col-lg-8">
             <div class="main_blog_details">
-
               {% if post.image_url %}
                <img class="img-fluid" src="{{ post.image_url }}" alt="Post image">
               {% else %}
                 <img src="{% static "img/banner/blog.png" %}" class="card-img-top" alt="Blog's banner">
               {% endif %}
-
                 <h4> {{ post.title }} </h4>
                 <div class="user_details">
                   <div class="mt-sm-0 mt-3">
@@ -222,8 +218,5 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <!--================ End Footer Area =================-->
 
   <script src="{% static "scripts.js"%}"></script>
-</body>
-</html>
-
 
 {% endblock %}
